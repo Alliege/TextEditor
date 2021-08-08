@@ -1,7 +1,7 @@
-import tkinter as tk
-from tkinter.filedialog import askopenfilename, asksaveasfilename
+import tkinter as tk # Aliase for Tkinter
+from tkinter.filedialog import askopenfilename, asksaveasfilename # Import tkinter modules
 
-def open_file():
+def open_file(): # Def open a file and file type, you can add yours
     """Open a file for editing."""
     filepath = askopenfilename(
         filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")]
@@ -18,7 +18,7 @@ def save_file():
     """Save the current file as a new file."""
     filepath = asksaveasfilename(
         defaultextension="txt",
-        filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")],
+        filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")], # again
     )
     if not filepath:
         return
